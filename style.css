@@ -1,0 +1,116 @@
+.ATB {
+    width: 128px;
+    height: 8px;
+    border: 1px solid white;
+    background-color: grey;
+}
+
+.ATBinner {
+    background-color: orange;
+    height: 100%;
+}
+
+.battleCell {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#battlefield {
+    display: flex;
+    height: 100%;
+    background-color: rgb(0, 115, 192);
+    align-items: flex-end;
+}
+
+.battleRow {
+    display: flex;
+    flex: 1;
+}
+
+.battleUnit {
+    width: 96px;
+    height: auto;
+}
+
+.enemyField {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 50%;
+    background-color: rgb(45, 110, 48);
+}
+
+.fieldCell {
+    width: 64px;
+    height: 64px;
+    border: 1px solid white;
+}
+
+.fieldCell:hover {
+    background-color: aqua;
+}
+
+.fieldCell.selected {
+    background-color: red;
+}
+
+#fieldGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.fieldRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fieldUnit {
+    width: 100%;
+    height: 100%;
+}
+
+#gamespace {
+    width: 800px;
+    height: 600px;
+    background-color: black;
+}
+
+.HPB {
+    width: 128px;
+    height: 8px;
+    border: 1px solid white;
+    background-color: grey;
+}
+
+.HPBinner {
+    background-color: rgb(235, 0, 0);
+    height: 100%;
+}
+
+.playerField {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 50%;
+    background-color: rgb(45, 110, 48);
+}
+
+.SPB {
+    width: 128px;
+    height: 8px;
+    border: 1px solid white;
+    background-color: grey;
+}
+
+.SPBinner {
+    background-color: purple;
+    height: 100%;
+}
+

@@ -1,0 +1,5 @@
+- Use html elements and css animations for game rather than using a canvas.
+
+- Background element is a 'relative' container that allows for 'absolute' positioning within.
+
+- Grid is made up of divs held in flex rows.
