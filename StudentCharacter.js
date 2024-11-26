@@ -28,8 +28,8 @@ export class StudentCharacter {
 
     getEffectiveStats() {
         return {
-            pow: this.stats.pow + this.equipment.weapon?.pow + this.equipment.armor.pow + this.equipment.acc.pow,
-            spd: this.stats.spd + this.equipment.weapon?.spd + this.equipment.armor.spd + this.equipment.acc.spd,
+            pow: this.stats.pow + this.equipment.weapon.pow + this.equipment.armor.pow + this.equipment.acc.pow,
+            spd: this.stats.spd + this.equipment.weapon.spd + this.equipment.armor.spd + this.equipment.acc.spd,
             def: this.stats.def + this.equipment.weapon.def + this.equipment.armor.def + this.equipment.acc.def,
             spc: this.stats.spc + this.equipment.weapon.spc + this.equipment.armor.spc + this.equipment.acc.spc,
             lck: this.stats.lck + this.equipment.weapon.lck + this.equipment.armor.lck + this.equipment.acc.lck,

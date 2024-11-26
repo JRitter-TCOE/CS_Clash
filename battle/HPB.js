@@ -12,13 +12,33 @@ export class HPB {
 
     update() {
         this.innerBar.css({'width': `${this.current/this.max*this.width}px`});
+        this.removeUnitIfDead();
+    }
+
+    removeUnitIfDead() {
         if (this.current <= 0) {
             if (this.unit.unitType === 'player') {
-                this.unit.battlefield.playerUnits.splice(0, 1);
+                this.removePlayer();
             }
             else {
-                this.unit.battlefield.enemyUnits.splice(0, 1);
+                this.removeEnemy();
             }
         }
+    }
+
+    removePlayer() {
+        this.unit.battlefield.playerUnits.splice(0, 1);
+        this.unit.html.css({'display': 'none'});
+        this.unit.HPB.html.css({'display': 'none'});
+        this.unit.SPB.html.css({'display': 'none'});
+        this.unit.ATB.html.css({'display': 'none'});
+    }
+
+    removeEnemy() {
+        this.unit.battlefield.enemyUnits.splice(0, 1);
+        this.unit.html.css({'display': 'none'});
+        this.unit.HPB.html.css({'display': 'none'});
+        this.unit.SPB.html.css({'display': 'none'});
+        this.unit.ATB.html.css({'display': 'none'});
     }
 }
