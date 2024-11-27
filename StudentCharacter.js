@@ -1,7 +1,9 @@
 import { BruteForce } from "./abilities/basic/BruteForce";
+import { Tenacity } from "./abilities/passive/Tenacity";
 import { Macro } from "./abilities/special/Macro";
 import { NoAcc } from "./equipment/accessories/NoAcc";
 import { Hoodie } from "./equipment/armor/Hoodie";
+import { NoArmor } from "./equipment/armor/NoArmor";
 import { Keyboard } from "./equipment/weapons/Keyboard";
 
 export class StudentCharacter {
@@ -23,7 +25,7 @@ export class StudentCharacter {
         this.abilities = {
             'Basic': BruteForce,
             'Special': Macro,
-            'Passive': 'none'
+            'Passive': Tenacity
         }
     }
 

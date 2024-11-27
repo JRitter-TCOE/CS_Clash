@@ -1,8 +1,8 @@
 export class Hoodie {
     constructor() {
         this.pow = 0;
-        this.spd = 2;
-        this.def = 2;
+        this.spd = 0;
+        this.def = 1;
         this.spc = 0;
         this.lck = 0;
     }

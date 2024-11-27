@@ -5,10 +5,12 @@ import { StudentCharacter } from "./StudentCharacter.js";
 
 const students = [
     new StudentCharacter('student', './gifs/Character_Standing.gif'),
-    new StudentCharacter('student', './gifs/Character_Standing_2.gif')
+    new StudentCharacter('student', './gifs/Character_Standing_2.gif'),
+    new StudentCharacter('student', './gifs/Character_Standing_2.gif'),
+    new StudentCharacter('student', './gifs/Character_Standing.gif')
 ];
 
-students[0].stats.spd = 2;
+
 
 const enemies = [
     new Bug(),
