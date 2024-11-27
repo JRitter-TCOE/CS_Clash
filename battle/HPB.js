@@ -15,6 +15,21 @@ export class HPB {
         this.removeUnitIfDead();
     }
 
+    get() {
+        return this.current;
+    }
+    
+    set(value) {
+        this.current = value;
+        this.update();
+    }
+
+    change(value) {
+        this.current = this.current + value > this.max ? this.max : this.current + value;
+        this.update();
+    }
+
+
     removeUnitIfDead() {
         if (this.current <= 0) {
             if (this.unit.unitType === 'player') {

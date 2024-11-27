@@ -16,4 +16,20 @@ export class BattleUnit {
         this.unitType = this.character.constructor.name === 'StudentCharacter' ? "player" : "enemy";
         this.targets = this.unitType === "player" ? 'enemyUnits' : 'playerUnits';
     }
+
+    getAttribute(type) {
+        return this[type].get();
+    }
+
+    setAttribute(type, value) {
+        this[type].set(value);
+    }
+
+    changeAttribute(type, value) {
+        this[type].change(value);
+    }
+
+    getStat(type) {
+        return this.character.getEffectiveStats()[type];
+    }
 }

@@ -13,4 +13,18 @@ export class SPB {
     update() {
         this.innerBar.css({'width': `${this.current/this.max*this.width}px`});
     }
+
+    get() {
+        return this.current;
+    }
+    
+    set(value) {
+        this.current = value;
+        this.update();
+    }
+
+    change(value) {
+        this.current = this.current + value > this.max ? this.max : this.current + value;
+        this.update();
+    }
 }

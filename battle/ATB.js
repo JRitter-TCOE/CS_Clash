@@ -12,6 +12,25 @@ export class ATB {
         this.tick();
     }
 
+    update() {
+        this.innerBar.css({'width': `${this.current/this.max*this.width}px`});
+    }
+
+
+    get() {
+        return this.current;
+    }
+    
+    set(value) {
+        this.current = value;
+        this.update();
+    }
+
+    change(value) {
+        this.current = this.current + value > this.max ? this.max : this.current + value;
+        this.update();
+    }
+
     tick() {
         if (this.isDead()) {
             return;
@@ -29,7 +48,7 @@ export class ATB {
     }
 
     increaseATB() {
-        this.current += this.unit.character.getEffectiveStats().spd;
+        this.change(this.unit.getStat('spd'));
     }
 
     triggerAttack() {
@@ -45,19 +64,15 @@ export class ATB {
 
     basicAttack() {
         this.unit.character.abilities.Basic(this.unit.character, this.unit.battlefield[this.unit.targets]);
-        this.current = 0;   
-        this.unit.SPB.current = this.unit.SPB.current + 20 > this.unit.SPB.max ? this.unit.SPB.max : this.unit.SPB.current + 20;
-        this.unit.SPB.update();
+        this.set(0);  
+        this.unit.changeAttribute('SPB', 20);
     }
 
     specialAttack() {
         this.unit.character.abilities.Special(this.unit.character, this.unit.battlefield[this.unit.targets]);
-        this.current = 0;
-        this.unit.SPB.current = 0;
-        this.unit.SPB.update();
+        this.set(0);
+        this.unit.setAttribute('SPB', 0);
     }
 
-    update() {
-        this.innerBar.css({'width': `${this.current/this.max*this.width}px`});
-    }
+    
 }
