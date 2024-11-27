@@ -1,3 +1,4 @@
+import { DmgCounter } from "../hud/DmgCounter";
 import { ATB } from "./ATB";
 import { HPB } from "./HPB";
 import { SPB } from "./SPB";

@@ -8,6 +8,8 @@ const students = [
     new StudentCharacter('student', './gifs/Character_Standing_2.gif')
 ];
 
+students[0].stats.spd = 2;
+
 const enemies = [
     new Bug(),
     new Bug(),
