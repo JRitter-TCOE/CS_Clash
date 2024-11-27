@@ -63,13 +63,13 @@ export class ATB {
     }
 
     basicAttack() {
-        this.unit.character.abilities.Basic(this.unit.character, this.unit.battlefield[this.unit.targets]);
+        this.unit.character.abilities.Basic(this.unit, this.unit.battlefield[this.unit.targets]);
         this.set(0);  
         this.unit.changeAttribute('SPB', 20);
     }
 
     specialAttack() {
-        this.unit.character.abilities.Special(this.unit.character, this.unit.battlefield[this.unit.targets]);
+        this.unit.character.abilities.Special(this.unit, this.unit.battlefield[this.unit.targets]);
         this.set(0);
         this.unit.setAttribute('SPB', 0);
     }

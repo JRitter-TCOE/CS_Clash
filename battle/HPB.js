@@ -2,7 +2,7 @@ export class HPB {
     constructor(unit) {
         this.unit = unit;
         this.width = 128;
-        this.max = this.unit.character.getEffectiveStats().def * 5;
+        this.max = this.unit.getStat('def') * 5;
         this.current = this.max;
         this.html = $('<div class="HPB"></div>');
         this.innerBar = $('<div class="HPBinner"></div>');
