@@ -34,9 +34,27 @@ export class ATB {
 
     triggerAttack() {
         if (this.current >= this.max) {
-            this.unit.character.abilities.Basic(this.unit.character, this.unit.battlefield[this.unit.targets][0]);
-            this.current = 0;   
+            if (this.unit.SPB.current < this.unit.SPB.max) {
+                this.basicAttack();
+            }
+            else {
+                this.specialAttack();
+            }
         }
+    }
+
+    basicAttack() {
+        this.unit.character.abilities.Basic(this.unit.character, this.unit.battlefield[this.unit.targets]);
+        this.current = 0;   
+        this.unit.SPB.current = this.unit.SPB.current + 20 > this.unit.SPB.max ? this.unit.SPB.max : this.unit.SPB.current + 20;
+        this.unit.SPB.update();
+    }
+
+    specialAttack() {
+        this.unit.character.abilities.Special(this.unit.character, this.unit.battlefield[this.unit.targets]);
+        this.current = 0;
+        this.unit.SPB.current = 0;
+        this.unit.SPB.update();
     }
 
     update() {

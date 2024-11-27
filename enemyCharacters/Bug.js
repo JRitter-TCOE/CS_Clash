@@ -1,4 +1,5 @@
 import { Byte } from "../abilities/basic/Byte";
+import { MegaByte } from "../abilities/special/MegaByte";
 import { NoAcc } from "../equipment/accessories/NoAcc";
 import { NoArmor } from "../equipment/armor/NoArmor";
 import { NoWeapon } from "../equipment/weapons/NoWeapon";
@@ -21,7 +22,7 @@ export class Bug {
         }
         this.abilities = {
             'Basic': Byte,
-            'Special': 'megabyte',
+            'Special': MegaByte,
             'Passive': 'none'
         }
     }
