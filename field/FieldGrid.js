@@ -13,8 +13,8 @@ export class FieldGrid {
     }
 
     assembleGrid() {
-        for (let r=0; r<rowCount; r++) {
-            let row = new FieldRow(this, r, colCount);
+        for (let r=0; r<this.rowCount; r++) {
+            let row = new FieldRow(this, r, this.colCount);
             this.rows.push(row);
             this.html.append(row.html);
         }
@@ -23,4 +23,5 @@ export class FieldGrid {
     displayGrid() {
         $('#gamespace').append(this.html);
     }
+
 }

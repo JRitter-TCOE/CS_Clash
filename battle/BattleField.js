@@ -15,6 +15,6 @@ export class BattleField {
     }
 
     displayBattlefield() {
-        $('#gamespace').append(this.html);
+        $('#gamespace').html(this.html);
     }
 }

@@ -1,3 +1,5 @@
+import { Encounter } from "../encounters/Encounter";
+
 export class FieldCell {
     constructor(fieldGrid, row, col) {
         this.fieldGrid = fieldGrid;
@@ -21,6 +23,7 @@ export class FieldCell {
             this.updateSelf();
             this.updateUnit();
             this.updateSelectedCell();
+            new Encounter('battle', this.unit);
         }
     }
 

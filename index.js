@@ -1,5 +1,7 @@
 import { BattleField } from "./battle/BattleField.js";
 import { Bug } from "./enemyCharacters/Bug.js";
+import { FieldGrid } from "./field/FieldGrid.js";
+import { FieldUnit } from "./field/FieldUnit.js";
 import { StudentCharacter } from "./StudentCharacter.js";
 
 
@@ -12,15 +14,12 @@ const students = [
 
 
 
-const enemies = [
-    new Bug(),
-    new Bug(),
-    new Bug()
-];
-
-const battlefield = new BattleField(students, enemies);
 
 
+
+
+const field = new FieldGrid(5, 5);
+const unit = new FieldUnit(field, 2, 2, students);
 
 $('body').append('<p id="info"></p>');
 
